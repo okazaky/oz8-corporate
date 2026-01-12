@@ -9,22 +9,22 @@ const alternateLocale = locale === 'ja' ? 'en' : 'ja';
 const alternateUrl = getAlternateUrl(currentPath, alternateLocale);
 ---
 
-<footer class="bg-gradient-to-br from-[#503AA8] to-[#6B4FBF] text-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<footer class="bg-[#333333] text-gray-300">
+  <div class="max-w-6xl mx-auto px-6 md:px-8 py-10">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- Company Info -->
       <div>
-        <h3 class="text-[#FFEE58] text-lg font-bold mb-4">
+        <h3 class="text-white text-base font-semibold mb-4">
           OZ8 {locale === 'ja' ? '株式会社' : 'Corporation'}
         </h3>
-        <p class="text-sm mb-2 text-gray-100">{t.company.locationValue}</p>
+        <p class="text-sm mb-2">{t.company.locationValue}</p>
         <p class="text-sm mb-2">
-          <a href="mailto:ozeight@gmail.com" class="text-gray-100 hover:text-[#FFEE58] transition-colors">
+          <a href="mailto:ozeight@gmail.com" class="hover:text-white">
             ozeight@gmail.com
           </a>
         </p>
         <p class="text-sm">
-          <a href="tel:+819041717093" class="text-gray-100 hover:text-[#FFEE58] transition-colors">
+          <a href="tel:+819041717093" class="hover:text-white">
             090-4171-7093
           </a>
         </p>
@@ -32,27 +32,27 @@ const alternateUrl = getAlternateUrl(currentPath, alternateLocale);
 
       <!-- Quick Links -->
       <div>
-        <h3 class="text-[#FFEE58] text-lg font-bold mb-4">
+        <h3 class="text-white text-base font-semibold mb-4">
           {locale === 'ja' ? 'クイックリンク' : 'Quick Links'}
         </h3>
         <ul class="space-y-2">
           <li>
-            <a href={locale === 'en' ? '/en/' : '/'} class="text-sm text-gray-100 hover:text-[#FFEE58] transition-colors">
+            <a href={locale === 'en' ? '/en/' : '/'} class="text-sm hover:text-white">
               {t.nav.home}
             </a>
           </li>
           <li>
-            <a href={locale === 'en' ? '/en/about' : '/about'} class="text-sm text-gray-100 hover:text-[#FFEE58] transition-colors">
+            <a href={locale === 'en' ? '/en/about' : '/about'} class="text-sm hover:text-white">
               {t.nav.about}
             </a>
           </li>
           <li>
-            <a href={locale === 'en' ? '/en/achievements' : '/achievements'} class="text-sm text-gray-100 hover:text-[#FFEE58] transition-colors">
+            <a href={locale === 'en' ? '/en/achievements' : '/achievements'} class="text-sm hover:text-white">
               {t.nav.achievements}
             </a>
           </li>
           <li>
-            <a href={locale === 'en' ? '/en/contact' : '/contact'} class="text-sm text-gray-100 hover:text-[#FFEE58] transition-colors">
+            <a href={locale === 'en' ? '/en/contact' : '/contact'} class="text-sm hover:text-white">
               {t.nav.contact}
             </a>
           </li>
@@ -61,15 +61,15 @@ const alternateUrl = getAlternateUrl(currentPath, alternateLocale);
 
       <!-- Brand -->
       <div>
-        <h3 class="text-[#FFEE58] text-lg font-bold mb-4">
+        <h3 class="text-white text-base font-semibold mb-4">
           {locale === 'ja' ? 'ブランド' : 'Brand'}
         </h3>
-        <p class="text-sm mb-3 text-gray-100">{t.brand.calmoonTitle}</p>
+        <p class="text-sm mb-3">{t.brand.calmoonTitle}</p>
         <a
           href="https://cal-moon.com"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-block text-sm text-[#FFEE58] hover:text-[#FFE91F] font-semibold transition-colors"
+          class="text-sm hover:text-white"
         >
           {t.brand.visit} →
         </a>
@@ -77,11 +77,11 @@ const alternateUrl = getAlternateUrl(currentPath, alternateLocale);
     </div>
 
     <!-- Bottom Bar -->
-    <div class="border-t border-white/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-      <p class="text-sm mb-4 md:mb-0 text-gray-100">{t.footer.copyright}</p>
+    <div class="border-t border-gray-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center text-sm">
+      <p class="mb-4 md:mb-0">{t.footer.copyright}</p>
       <a
         href={alternateUrl}
-        class="text-sm bg-[#FFEE58] hover:bg-[#FFE91F] text-[#503AA8] font-bold px-6 py-2 rounded-full transition-all"
+        class="hover:text-white"
       >
         {locale === 'ja' ? 'English' : '日本語'}
       </a>

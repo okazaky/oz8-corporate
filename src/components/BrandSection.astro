@@ -6,32 +6,29 @@ const locale = getCurrentLocale(currentPath);
 const t = getTranslations(locale);
 ---
 
-<section class="py-20 bg-gradient-to-br from-[#503AA8] to-[#6B4FBF] relative overflow-hidden">
-  <!-- Decorative elements -->
-  <div class="absolute top-0 right-0 w-96 h-96 bg-[#FFEE58] opacity-10 rounded-full blur-3xl"></div>
-
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <h2 class="text-4xl md:text-5xl font-extrabold text-center text-white mb-16">
+<section class="py-16 md:py-20">
+  <div class="max-w-6xl mx-auto px-6 md:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-[#333333] mb-12">
       {t.brand.title}
     </h2>
 
-    <div class="max-w-5xl mx-auto">
-      <div class="bg-white/95 backdrop-blur-sm p-10 md:p-16 rounded-3xl shadow-2xl">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white p-10 md:p-12 rounded-lg border border-gray-200">
         <div class="text-center">
-          <h3 class="text-4xl md:text-5xl font-extrabold text-[#503AA8] mb-6">
+          <h3 class="text-3xl md:text-4xl font-bold text-[#333333] mb-6">
             {t.brand.calmoonTitle}
           </h3>
-          <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+          <p class="text-lg text-[#666666] mb-6 leading-relaxed">
             {t.brand.calmoonDesc}
           </p>
-          <p class="text-lg text-gray-600 mb-10">
+          <p class="text-base text-[#666666] mb-8">
             {t.brand.products}
           </p>
           <a
             href="https://cal-moon.com"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-block bg-[#FFEE58] hover:bg-[#FFE91F] text-[#503AA8] font-bold px-10 py-4 rounded-full text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all"
+            class="inline-block bg-[#8B7355] hover:bg-[#72593F] text-white font-medium px-8 py-3 rounded-md text-base"
           >
             {t.brand.visit} →
           </a>

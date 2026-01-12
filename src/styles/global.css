@@ -4,22 +4,21 @@
   --font-sans-jp: 'Noto Sans JP', sans-serif;
   --font-sans-en: 'Manrope', sans-serif;
 
-  /* Pegasus-inspired colors */
-  --color-primary: #503AA8;
-  --color-accent: #FFEE58;
-  --color-neutral: #686868;
-  --color-bg: #FFFFFF;
+  /* Minimal, warm colors - pegasus-b.com style */
+  --color-cream: #FAF8F3;
+  --color-brown: #8B7355;
+  --color-text: #333333;
+  --color-text-light: #666666;
+  --color-white: #FFFFFF;
 }
 
 body {
-  font-family: var(--font-sans-en), var(--font-sans-jp), system-ui, -apple-system, sans-serif;
-  background-color: var(--color-bg);
-  color: var(--color-neutral);
+  font-family: var(--font-sans-jp), var(--font-sans-en), system-ui, -apple-system, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-text);
 }
 
-/* Smooth transitions */
-* {
-  transition-property: color, background-color, border-color, transform, opacity;
-  transition-duration: 200ms;
-  transition-timing-function: ease-in-out;
+/* Smooth transitions for interactive elements only */
+a, button {
+  transition: all 0.2s ease;
 }
