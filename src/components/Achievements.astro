@@ -1,0 +1,56 @@
+---
+import { getCurrentLocale, getTranslations } from '../i18n/translations';
+
+const currentPath = Astro.url.pathname;
+const locale = getCurrentLocale(currentPath);
+const t = getTranslations(locale);
+
+const achievements = [
+  {
+    title: t.achievements.makuake,
+    description: t.achievements.makuakeDesc,
+    icon: '🚀'
+  },
+  {
+    title: t.achievements.anan,
+    description: t.achievements.ananDesc,
+    icon: '📰'
+  },
+  {
+    title: t.achievements.amazon,
+    description: t.achievements.amazonDesc,
+    icon: '📦'
+  },
+  {
+    title: t.achievements.survey,
+    description: t.achievements.surveyDesc,
+    icon: '📊'
+  }
+];
+---
+
+<section class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+      {t.achievements.title}
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {achievements.map((achievement) => (
+        <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200">
+          <div class="flex items-start">
+            <div class="text-4xl mr-4 flex-shrink-0">{achievement.icon}</div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                {achievement.title}
+              </h3>
+              <p class="text-gray-600">
+                {achievement.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,97 @@
+---
+import { getCurrentLocale, getTranslations, getAlternateUrl } from '../i18n/translations';
+
+const currentPath = Astro.url.pathname;
+const locale = getCurrentLocale(currentPath);
+const t = getTranslations(locale);
+
+const alternateLocale = locale === 'ja' ? 'en' : 'ja';
+const alternateUrl = getAlternateUrl(currentPath, alternateLocale);
+
+const navItems = [
+  { href: locale === 'en' ? '/en/' : '/', label: t.nav.home },
+  { href: locale === 'en' ? '/en/about' : '/about', label: t.nav.about },
+  { href: locale === 'en' ? '/en/achievements' : '/achievements', label: t.nav.achievements },
+  { href: locale === 'en' ? '/en/contact' : '/contact', label: t.nav.contact }
+];
+---
+
+<header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href={locale === 'en' ? '/en/' : '/'} class="text-xl font-bold text-gray-900">
+          OZ8 {locale === 'ja' ? '株式会社' : 'Corporation'}
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium"
+          >
+            {item.label}
+          </a>
+        ))}
+
+        <!-- Language Switch -->
+        <a
+          href={alternateUrl}
+          class="px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50 transition-colors duration-200"
+        >
+          {locale === 'ja' ? 'English' : '日本語'}
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        type="button"
+        class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100"
+        aria-label="Toggle menu"
+        id="mobile-menu-button"
+      >
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="hidden md:hidden pb-4" id="mobile-menu">
+      <div class="flex flex-col space-y-3">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium px-3 py-2"
+          >
+            {item.label}
+          </a>
+        ))}
+        <a
+          href={alternateUrl}
+          class="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium px-3 py-2 border-t border-gray-200 mt-2 pt-4"
+        >
+          {locale === 'ja' ? 'English' : '日本語'}
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Spacer for fixed header -->
+<div class="h-16"></div>
+
+<script>
+  // Mobile menu toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    button?.addEventListener('click', () => {
+      menu?.classList.toggle('hidden');
+    });
+  });
+</script>

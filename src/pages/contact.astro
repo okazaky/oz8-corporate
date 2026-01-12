@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import { getCurrentLocale, getTranslations } from '../i18n/translations';
+
+const currentPath = Astro.url.pathname;
+const locale = getCurrentLocale(currentPath);
+const t = getTranslations(locale);
+---
+
+<BaseLayout title={`${t.nav.contact} | ${t.site.title}`}>
+  <Header />
+  <main>
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-8">
+          {t.nav.contact}
+        </h1>
+      </div>
+    </section>
+    <ContactCTA />
+
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gray-50 p-8 rounded-lg">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">
+            {locale === 'ja' ? '会社所在地' : 'Location'}
+          </h2>
+          <p class="text-gray-700 mb-4">{t.company.locationValue}</p>
+          <div class="aspect-video w-full">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3221.7!2d138.05!3d36.07!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDA0JzE0LjQiTiAxMzjCsDAzJzAwLjAiRQ!5e0!3m2!1sja!2sjp!4v1234567890"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

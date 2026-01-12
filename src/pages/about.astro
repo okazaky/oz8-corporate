@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CompanyInfo from '../components/CompanyInfo.astro';
+import { getCurrentLocale, getTranslations } from '../i18n/translations';
+
+const currentPath = Astro.url.pathname;
+const locale = getCurrentLocale(currentPath);
+const t = getTranslations(locale);
+---
+
+<BaseLayout title={`${t.nav.about} | ${t.site.title}`}>
+  <Header />
+  <main>
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-8">
+          {t.nav.about}
+        </h1>
+      </div>
+    </section>
+    <CompanyInfo />
+  </main>
+  <Footer />
+</BaseLayout>

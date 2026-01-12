@@ -1,0 +1,42 @@
+---
+import { getCurrentLocale, getTranslations } from '../i18n/translations';
+
+const currentPath = Astro.url.pathname;
+const locale = getCurrentLocale(currentPath);
+const t = getTranslations(locale);
+
+const companyInfo = [
+  { label: t.company.name, value: t.company.nameValue },
+  { label: t.company.established, value: t.company.establishedValue },
+  { label: t.company.representative, value: t.company.representativeValue },
+  { label: t.company.location, value: t.company.locationValue },
+  { label: t.company.business, value: t.company.businessValue }
+];
+---
+
+<section class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+      {t.company.title}
+    </h2>
+
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <table class="w-full">
+          <tbody class="divide-y divide-gray-200">
+            {companyInfo.map((info) => (
+              <tr>
+                <td class="px-6 py-4 bg-gray-50 font-semibold text-gray-900 w-1/3 md:w-1/4">
+                  {info.label}
+                </td>
+                <td class="px-6 py-4 text-gray-700">
+                  {info.value}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

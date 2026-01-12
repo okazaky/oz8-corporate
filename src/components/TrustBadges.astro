@@ -1,0 +1,52 @@
+---
+import { getCurrentLocale, getTranslations } from '../i18n/translations';
+
+const currentPath = Astro.url.pathname;
+const locale = getCurrentLocale(currentPath);
+const t = getTranslations(locale);
+
+const badges = [
+  {
+    title: t.trust.established,
+    description: t.trust.establishedDesc,
+    icon: '📅'
+  },
+  {
+    title: t.trust.guarantee,
+    description: t.trust.guaranteeDesc,
+    icon: '✓'
+  },
+  {
+    title: t.trust.supervised,
+    description: t.trust.supervisedDesc,
+    icon: '👨‍⚕️'
+  },
+  {
+    title: t.trust.rating,
+    description: t.trust.ratingDesc,
+    icon: '⭐'
+  }
+];
+---
+
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+      {t.trust.title}
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {badges.map((badge) => (
+        <div class="text-center p-6 rounded-lg border border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-200">
+          <div class="text-4xl mb-4">{badge.icon}</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">
+            {badge.title}
+          </h3>
+          <p class="text-sm text-gray-600">
+            {badge.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

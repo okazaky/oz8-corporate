@@ -1,0 +1,70 @@
+{
+  "site": {
+    "title": "OZ8株式会社 | トラベル＆リラックスグッズの企画開発",
+    "description": "OZ8株式会社は2006年設立。トラベルグッズ・リラックスグッズの企画開発・製造・販売を行っています。自社ブランドcalmoon（カルムーン）を展開。"
+  },
+  "nav": {
+    "home": "ホーム",
+    "about": "会社概要",
+    "achievements": "実績",
+    "contact": "お問い合わせ"
+  },
+  "hero": {
+    "title": "OZ8株式会社",
+    "subtitle": "トラベル＆リラックスグッズの企画開発",
+    "description": "2006年設立。品質にこだわり、お客様の快適な生活をサポートする製品をお届けします。",
+    "cta": "お問い合わせ"
+  },
+  "trust": {
+    "title": "信頼の実績",
+    "established": "設立18年以上",
+    "establishedDesc": "2006年6月設立",
+    "guarantee": "180日返金保証",
+    "guaranteeDesc": "品質への自信",
+    "supervised": "理学療法士監修",
+    "supervisedDesc": "専門家による製品開発",
+    "rating": "Amazon評価4.0",
+    "ratingDesc": "940件以上のレビュー"
+  },
+  "achievements": {
+    "title": "実績・メディア掲載",
+    "makuake": "Makuake初日100万円突破",
+    "makuakeDesc": "SUV PACK（完全防水ソーラーリュック）",
+    "anan": "anan雑誌掲載",
+    "ananDesc": "No.2362「最高の眠り」特集",
+    "amazon": "Amazon月間1,000個以上販売",
+    "amazonDesc": "calmoon ネックピロー",
+    "survey": "1製品1,500人以上の調査",
+    "surveyDesc": "徹底的なユーザー調査による製品開発"
+  },
+  "brand": {
+    "title": "ブランド紹介",
+    "calmoonTitle": "calmoon（カルムーン）",
+    "calmoonDesc": "理学療法士監修のリラックスブランド。人間工学に基づいた設計で、最適な姿勢をサポートします。",
+    "products": "主要商品：ネックピロー、ランバーサポート、アームレスト",
+    "visit": "ブランドサイトを見る"
+  },
+  "company": {
+    "title": "会社概要",
+    "name": "会社名",
+    "nameValue": "OZ8株式会社",
+    "established": "設立",
+    "establishedValue": "2006年6月",
+    "representative": "代表者",
+    "representativeValue": "岡崎よしあき",
+    "location": "所在地",
+    "locationValue": "長野県岡谷市山手町1-8-1",
+    "business": "事業内容",
+    "businessValue": "製造業及び小売業（トラベルグッズ・リラックスグッズの企画開発・製造・販売）"
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "description": "OEM製造のご相談、製品に関するお問い合わせはこちらから",
+    "email": "メール",
+    "phone": "電話",
+    "cta": "今すぐ問い合わせる"
+  },
+  "footer": {
+    "copyright": "© 2006-2026 OZ8株式会社 All Rights Reserved."
+  }
+}

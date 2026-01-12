@@ -1,0 +1,70 @@
+{
+  "site": {
+    "title": "OZ8 Corporation | Travel & Relaxation Goods Planning and Development",
+    "description": "OZ8 Corporation, established in 2006, specializes in planning, developing, manufacturing, and selling travel and relaxation goods. We operate the calmoon brand."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "achievements": "Achievements",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "OZ8 Corporation",
+    "subtitle": "Travel & Relaxation Goods Planning and Development",
+    "description": "Established in 2006. We deliver products that support our customers' comfortable lives with a focus on quality.",
+    "cta": "Contact Us"
+  },
+  "trust": {
+    "title": "Trusted Track Record",
+    "established": "18+ Years in Business",
+    "establishedDesc": "Established June 2006",
+    "guarantee": "180-Day Money-Back Guarantee",
+    "guaranteeDesc": "Confidence in Quality",
+    "supervised": "Physical Therapist Supervised",
+    "supervisedDesc": "Expert Product Development",
+    "rating": "Amazon Rating 4.0",
+    "ratingDesc": "940+ Reviews"
+  },
+  "achievements": {
+    "title": "Achievements & Media Coverage",
+    "makuake": "Makuake: ¥1M+ on Day 1",
+    "makuakeDesc": "SUV PACK (Waterproof Solar Backpack)",
+    "anan": "Featured in anan Magazine",
+    "ananDesc": "No.2362 'Best Sleep' Special",
+    "amazon": "Amazon: 1,000+ Units/Month",
+    "amazonDesc": "calmoon Neck Pillow",
+    "survey": "1,500+ User Surveys per Product",
+    "surveyDesc": "Thorough user research for product development"
+  },
+  "brand": {
+    "title": "Our Brand",
+    "calmoonTitle": "calmoon",
+    "calmoonDesc": "A relaxation brand supervised by physical therapists. Designed based on ergonomics to support optimal posture.",
+    "products": "Main Products: Neck Pillows, Lumbar Support, Armrests",
+    "visit": "Visit Brand Site"
+  },
+  "company": {
+    "title": "Company Overview",
+    "name": "Company Name",
+    "nameValue": "OZ8 Corporation",
+    "established": "Established",
+    "establishedValue": "June 2006",
+    "representative": "Representative",
+    "representativeValue": "Yoshiaki Okazaki",
+    "location": "Location",
+    "locationValue": "1-8-1 Yamate-cho, Okaya City, Nagano Prefecture, Japan",
+    "business": "Business",
+    "businessValue": "Manufacturing and retail (Planning, development, manufacturing, and sales of travel and relaxation goods)"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "For OEM manufacturing inquiries and product-related questions",
+    "email": "Email",
+    "phone": "Phone",
+    "cta": "Contact Now"
+  },
+  "footer": {
+    "copyright": "© 2006-2026 OZ8 Corporation All Rights Reserved."
+  }
+}

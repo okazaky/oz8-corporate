@@ -1,0 +1,29 @@
+---
+import { getCurrentLocale, getTranslations } from '../i18n/translations';
+
+const currentPath = Astro.url.pathname;
+const locale = getCurrentLocale(currentPath);
+const t = getTranslations(locale);
+---
+
+<section class="bg-gradient-to-b from-gray-50 to-white py-20 md:py-32">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+        {t.hero.title}
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-4">
+        {t.hero.subtitle}
+      </p>
+      <p class="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
+        {t.hero.description}
+      </p>
+      <a
+        href={locale === 'en' ? '/en/contact' : '/contact'}
+        class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+      >
+        {t.hero.cta}
+      </a>
+    </div>
+  </div>
+</section>
