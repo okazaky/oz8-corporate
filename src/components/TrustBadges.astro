@@ -29,22 +29,27 @@ const badges = [
 ];
 ---
 
-<section class="py-16 bg-white">
+<section class="py-20 bg-gray-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-center text-[#503AA8] mb-16">
       {t.trust.title}
     </h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {badges.map((badge) => (
-        <div class="text-center p-6 rounded-lg border border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-200">
-          <div class="text-4xl mb-4">{badge.icon}</div>
-          <h3 class="text-lg font-bold text-gray-900 mb-2">
-            {badge.title}
-          </h3>
-          <p class="text-sm text-gray-600">
-            {badge.description}
-          </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {badges.map((badge, index) => (
+        <div class="group relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+          <!-- Yellow accent line -->
+          <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#FFEE58] to-[#FFE91F] rounded-t-2xl"></div>
+
+          <div class="text-center">
+            <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">{badge.icon}</div>
+            <h3 class="text-xl font-bold text-[#503AA8] mb-3">
+              {badge.title}
+            </h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              {badge.description}
+            </p>
+          </div>
         </div>
       ))}
     </div>

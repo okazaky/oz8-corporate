@@ -2,9 +2,24 @@
 
 :root {
   --font-sans-jp: 'Noto Sans JP', sans-serif;
-  --font-sans-en: 'Inter', sans-serif;
+  --font-sans-en: 'Manrope', sans-serif;
+
+  /* Pegasus-inspired colors */
+  --color-primary: #503AA8;
+  --color-accent: #FFEE58;
+  --color-neutral: #686868;
+  --color-bg: #FFFFFF;
 }
 
 body {
-  font-family: var(--font-sans-jp), var(--font-sans-en), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans-en), var(--font-sans-jp), system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-neutral);
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, transform, opacity;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
 }

@@ -6,21 +6,27 @@ const locale = getCurrentLocale(currentPath);
 const t = getTranslations(locale);
 ---
 
-<section class="bg-gradient-to-b from-gray-50 to-white py-20 md:py-32">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="relative bg-gradient-to-br from-[#503AA8] via-[#6B4FBF] to-[#503AA8] py-24 md:py-40 overflow-hidden">
+  <!-- Decorative elements -->
+  <div class="absolute top-0 left-0 w-full h-full opacity-10">
+    <div class="absolute top-20 left-10 w-64 h-64 bg-[#FFEE58] rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#FFEE58] rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center">
-      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+      <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tight">
         {t.hero.title}
       </h1>
-      <p class="text-xl md:text-2xl text-gray-600 mb-4">
+      <p class="text-2xl md:text-3xl text-[#FFEE58] font-semibold mb-4">
         {t.hero.subtitle}
       </p>
-      <p class="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
+      <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
         {t.hero.description}
       </p>
       <a
         href={locale === 'en' ? '/en/contact' : '/contact'}
-        class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+        class="inline-block bg-[#FFEE58] hover:bg-[#FFE91F] text-[#503AA8] font-bold px-10 py-4 rounded-full text-lg shadow-2xl hover:shadow-[0_20px_50px_rgba(255,238,88,0.3)] transform hover:-translate-y-1"
       >
         {t.hero.cta}
       </a>
